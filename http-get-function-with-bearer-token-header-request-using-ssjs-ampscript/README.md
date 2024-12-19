@@ -1,52 +1,15 @@
-# Sample Ampscript and SSJS Codes
+# How to execute HTTP GET Request in SSJS and Ampscript using Bearer Token Authentication in Header
 
 ## Description
 
-This repository conatins some Ampscript and SSJS code snippets documented for public reference.
+This file contains SSJS and Ampscript code for executing a HTTP Get Request using Bearer Token Authentication in Header
 
-## Getting Started
+## Key Information for this use case
 
-### Technologies Used
+* [HttpGet()](https://developer.salesforce.com/docs/marketing/marketing-cloud-ampscript/references/mc-ampscript-http/mc-ampscript-reference-http-get.html) in Ampscript does not support header values, and hence we need to use the [HTTP.Get()](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_platformContentSyndicationHTTPGet.html) in SSJS to execute the GET Request.
+* The response from the GET Request is in JSON format. There is no function in Ampscript to Parse JSON. Hence, we need to use the [ParseJSON()](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_platformUtilityParseJSON.html) in SSJS to parse the JSON response and then forward the data to Ampscript using [SetValue()](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_platformAMPscriptVariableSetValue.html) SSJS function.
 
-* Ampscript in Salesforce Marketing Cloud
-* Server Side Javascript (SSJS) in Salesforce Marketing Cloud
-* HTML, CSS and JavaScript
-
-### Getting Started
-
-* Edit code on local machine using any IDE like Sublime, Visual Studio Code
-* Install plugin to support Ampscript syntax - for better code readability
-
-### Executing code
-
-* Copy/Clone code
-* Paste in Marketing Cloud's CloudPages or Email Templates or Content Blocks
-* Publish changes
-* Check Output
-
-## Help
-
-As a best practice, it is recommended to use the Try-Catch SSJS code block for all Ampscript code.
-Paste below code above the start of the HTML file.
-```
-<script runat="server">
-    Platform.Load("Core", "1.1.1");
-try {
-</script>
-%%[
-AMPSCRIPT CODE HERE
-]%%
-<script runat="server">
-} catch (e) {
- Write("<b>Error Message:</b> " + Stringify(e.message) + "<br><b>Description:</b> " + Stringify(e.description));
-}
-</script>
-
-```
-
-## Authors
-
-Contributors names and contact info
+## Author
 
 Gaurav Chafe 
 [X](https://x.com/gauravchafe) | [LinkedIn](https://in.linkedin.com/in/gauravchafe)
