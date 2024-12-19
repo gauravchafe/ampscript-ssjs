@@ -1,6 +1,4 @@
-# Project Title
-
-Sample Ampscript and SSJS Codes
+# Sample Ampscript and SSJS Codes
 
 ## Description
 
