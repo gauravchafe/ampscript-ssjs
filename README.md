@@ -9,7 +9,7 @@ This repository conatins some Ampscript and SSJS code snippets documented for pu
 * Server Side Javascript (SSJS) in Salesforce Marketing Cloud
 * HTML, CSS and JavaScript
 
-### Getting Started
+### Getting Started with Ampscript and SSJS
 * Edit code on local machine using any IDE like Sublime, Visual Studio Code
 * Install plugin to support Ampscript syntax - for better code readability
 
