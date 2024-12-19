@@ -51,13 +51,6 @@ Contributors names and contact info
 Gaurav Chafe 
 [X](https://x.com/gauravchafe) | [LinkedIn](https://in.linkedin.com/in/gauravchafe)
 
-## Version History
-
-* 0.2
-    * Code for http-get-function-with-bearer-token-header-request-in-ssjs-ampscript
-* 0.1
-    * Created blank repository
-
 ## License
 
 None - Code is for public use
