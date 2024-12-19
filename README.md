@@ -1,4 +1,4 @@
-# Sample Ampscript and SSJS Codes
+# Ampscript and SSJS Code Snippets
 This repository conatins some Ampscript and SSJS code snippets documented for public reference.
 
 ## Sample Codes
