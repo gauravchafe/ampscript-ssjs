@@ -4,7 +4,8 @@
 
 This repository conatins some Ampscript and SSJS code snippets documented for public reference.
 
-## Getting Started
+## Sample Codes
+* [How to execute HTTP GET Request in SSJS and Ampscript using Bearer Token Authentication in Header](http-get-function-with-bearer-token-header-request-using-ssjs-ampscript)
 
 ### Technologies Used
 
