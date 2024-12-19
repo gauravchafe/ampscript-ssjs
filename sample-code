@@ -1,0 +1,35 @@
+<script runat="server">
+Platform.Load("Core","1");
+
+var url = "DEFINE-ENDPOINT-URL";
+var headerKey = ["Authorization"];
+var headerValues = ["Bearer SECRET-KEY-OR-TOKEN"];
+var response = HTTP.Get(url, headerKey, headerValues);
+  
+//Set the @response variable to be accessible in AMPscript
+Variable.SetValue("@responseBody",response.Content);
+
+//Get the @response variable from AMPscript
+//var response = Variable.GetValue("@response");  
+  
+//Parse JSON to get individual field values
+var json = Platform.Function.ParseJSON(response.Content);
+  
+//Set the @name variable to be accessible in AMPscript
+Platform.Variable.SetValue("@name",json.Name);
+  
+  //Set the @email variable to be accessible in AMPscript
+Platform.Variable.SetValue("@email",json.Email); 
+</script>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<b>Display Name:</b> %%=v(@displayName)=%% <br/>
+		<b>Picture URL:</b> %%=v(@pictureURL)=%% <br/>
+	</body>
+</html>
